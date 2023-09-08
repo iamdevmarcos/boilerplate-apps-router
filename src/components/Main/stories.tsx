@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import Main from '.'
+import Main, { type MainProps } from '.'
 
 export default {
   title: 'components/Main',
@@ -10,4 +10,11 @@ export default {
   }
 } as Meta
 
-export const Default: StoryObj = {}
+export const Default: StoryObj<MainProps> = {}
+
+export const Basic: StoryObj<MainProps> = {
+  args: {
+    title: 'title basic',
+    description: 'description'
+  }
+}
